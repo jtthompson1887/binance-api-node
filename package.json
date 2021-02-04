@@ -9,11 +9,7 @@
   ],
   "scripts": {
     "build": "rm -rf dist && babel src -d dist",
-    "prepare": "yarn build",
-    "test": "ava --timeout=10s -v",
-    "cover": "nyc ava",
-    "report": "yarn cover && nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint src"
+    "prepare": "npm build",
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
@@ -28,7 +24,6 @@
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.4",
     "@babel/register": "^7.7.4",
-    "ava": "^2.4.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-module-resolver": "^3.2.0",
     "coveralls": "^3.0.9",
@@ -40,17 +35,7 @@
     "prettier": "^1.19.1"
   },
   "engines": {
-    "yarn": ">= 1.0.0"
-  },
-  "ava": {
-    "require": [
-      "@babel/register",
-      "@babel/polyfill"
-    ],
-    "files": [
-      "test/**/*",
-      "!test/utils.js"
-    ]
+    "npm": "*"
   },
   "author": "Balthazar Gronon <git@balthazar.dev>",
   "homepage": "https://github.com/Ashlar/binance-api-node",
